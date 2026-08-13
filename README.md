@@ -45,3 +45,4 @@ Common request headers include:
 - Referer: This specifies the address of the previous web page from which a link to the currently requested page was followed.
 
 - Connection: This header controls whether the network connection stays open after the current transaction finishes.
+
