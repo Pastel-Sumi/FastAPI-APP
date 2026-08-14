@@ -46,3 +46,26 @@ Common request headers include:
 
 - Connection: This header controls whether the network connection stays open after the current transaction finishes.
 
+`routes.py` will contain all the book routes.
+
+`schemas.py` will contain the schemas that are currently in our root directory.
+
+FastAPI routers allow easy modularization of our API by grouping related API routes together.
+
+Using our FastAPI instance, we include all endpoints created with it by calling the `include_router` method.
+Furthermore, we added the following arguments to the include_router method:
+
+* `prefix`: The path through which all related endpoints can be accessed. In our case, it's named the /{version}/books prefix, resulting in /v1/books or /v2/books based on the application version. This implies that all book-related endpoints can be accessed using http://localhost:8000/api/v1/books.
+
+* `tags`: The list of tags associated with the endpoints that fall within a given router.
+
+The current organization of our API endpoints is as follows:
+
+| Endpoint | Method | Description |
+| --- | --- | --- |
+| /api/v1/books | GET	| Read all books |
+/api/v1/books | POST | Create a book
+/api/v1/books/{book_id} | GET | Get a book by ID
+/api/v1/books/{book_id} | PATCH | Update a book by ID
+/api/v1/books/{book_id} | DELETE | Delete a book by ID
+
