@@ -69,3 +69,13 @@ The current organization of our API endpoints is as follows:
 /api/v1/books/{book_id} | PATCH | Update a book by ID
 /api/v1/books/{book_id} | DELETE | Delete a book by ID
 
+
+### Explaining an Object-Relational Mapper (ORM)
+An Object-Relational Mapper (ORM) serves as a translator between a programming language, such as Python, and a database, like PostgreSQL or MySQL.
+
+1. **Mapping Objects to Tables:** You create Python classes to represent tables in the database. Each object of these classes corresponds to a row in the database table.
+2. **Interacting with Data:** You can then interact with these Python objects as if they were regular objects in your code, like setting attributes and calling methods.
+3. **Behind the Scenes:** When you perform operations on these objects, like saving or deleting, the ORM translates these actions into the appropriate SQL queries that the database understands.
+4. **Data Conversion:** The ORM handles converting Python data types into database-specific types and vice versa, ensuring compatibility between the two.
+
+An ORM simplifies the process of working with databases by allowing you to focus on your application's logic in Python, rather than getting bogged down in SQL queries and database management details. It acts as a bridge between the object-oriented world of programming and the relational world of databases.
